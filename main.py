@@ -11,7 +11,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 # Configura o Gemini
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-pro')
 else:
     model = None
 
@@ -31,7 +31,7 @@ def chat_endpoint(input_data: MessageInput):
         response = model.generate_content(input_data.message)
         return {
             "response": response.text,
-            "model_used": "gemini-1.5-flash"
+            "model_used": "gemini-pro"
         }
     except Exception as e:
         return {"error": str(e)}
