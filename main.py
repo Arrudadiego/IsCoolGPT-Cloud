@@ -47,3 +47,5 @@ def chat_endpoint(input_data: MessageInput):
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
+
+# force update na imagem
