@@ -18,7 +18,7 @@ A solução foi implementada como uma API RESTful de alta performance, utilizand
 
 ## 2. Diagrama de Arquitetura do Sistema
 
-### Fluxo do Usuário (Aplicação):
+### Fluxo do Usuário (Aplicação)
 
 ```mermaid
 flowchart LR
@@ -34,16 +34,17 @@ flowchart LR
     end
 
     B --> E
+```
 
+## Fluxo de DevOps (CI/CD)
 
-Fluxo de DevOps (CI/CD):
-
+```mermaid
 flowchart TD
-    A[Desenvolvedor] -->|1. git push master| B[GitHub Repositório]
+    A[Desenvolvedor] -->|1. git push master| B[GitHub Repositorio]
     B -->|2. Aciona Pipeline| C[GitHub Actions CI/CD]
     C -->|3. Roda Testes Python| D[Testes Automatizados]
-    C -->|4. Build e Push da Imagem| E[AWS ECR Registro de Imagens]
-    C -->|5. Atualiza Serviço ECS| F[AWS ECS Deploy]
+    C -->|4. Build e Push da Imagem| E[AWS ECR]
+    C -->|5. Atualiza Servico ECS| F[AWS ECS Deploy]
     F -->|6. Puxa Imagem| E
     F -->|7. Roda Nova Task| G[AWS Fargate]
     G -->|8. Envia Logs| H[CloudWatch Logs]
