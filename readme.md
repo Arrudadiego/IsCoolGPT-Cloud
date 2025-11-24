@@ -23,7 +23,7 @@ A solução foi implementada como uma API RESTful de alta performance, utilizand
 ```mermaid
 flowchart LR
     A[Estudante] -->|1. JSON POST /chat| B[API FastAPI - ECS Fargate]
-    B -->|2. Prompt| C[Groq API (Llama 3.3)]
+    B -->|2. Prompt| C[Groq API - Llama 3_3]
     C -->|3. Resposta Gerada| B
     B -->|4. Resposta JSON| A
 
