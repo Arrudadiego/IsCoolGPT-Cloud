@@ -36,11 +36,11 @@ flowchart LR
     B --> E
 ```
 
-## Fluxo de DevOps (CI/CD)
+### Fluxo de DevOps (CI/CD)
 
 ```mermaid
 flowchart TD
-    A[Desenvolvedor] -->|1. git push master| B[GitHub Repositorio]
+    A[Desenvolvedor] -->|1. git push main| B[GitHub Repositorio]
     B -->|2. Aciona Pipeline| C[GitHub Actions CI/CD]
     C -->|3. Roda Testes Python| D[Testes Automatizados]
     C -->|4. Build e Push da Imagem| E[AWS ECR]
